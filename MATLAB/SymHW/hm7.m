@@ -1,20 +1,20 @@
 syms my_func(x)
-my_func = (exp(1./(1 - x.^2)))./(1+x.^2);
+func = (exp(1./(1 - x.^2)))./(1+x.^2);
 start_point = -7;
 end_point = 7;
-fplot(real(my_func), [start_point end_point]); grid on
+fplot(real(func), [start_point end_point]); grid on
 
-my_f_diff = diff(my_func);
-m_x_vals = solve(my_f_diff == 0);
-m_y_vals = my_func(m_x_vals);
+f_diff = diff(func);
+x_vals = solve(f_diff == 0);
+y_vals = func(x_vals);
 
 hold on
-plot(m_x_vals, m_y_vals, '*');
+plot(x_vals, y_vals, '*');
 hold off
 
-my_s_diff = diff(my_f_diff);
-s_x_vals = solve(my_s_diff == 0);
-s_y_vals = my_func(s_x_vals);
+s_diff = diff(f_diff);
+s_x_vals = solve(s_diff == 0);
+s_y_vals = func(s_x_vals);
 
 hold on
 plot(s_x_vals, s_y_vals, '*');
