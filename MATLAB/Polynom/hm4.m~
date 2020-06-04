@@ -5,7 +5,5 @@ Poly= sym2poly(Poly_symb);
 PolyRoots=roots(Poly)
 Derivative=polyder(Poly);
 DerivativeRoots=roots(Derivative)
-Lia = ismember(DerivativeRoots,PolyRoots)
-
 
 
