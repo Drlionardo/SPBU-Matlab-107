@@ -2,8 +2,22 @@ n = input('n=');
 syms x
 Poly_symb = x^(2*n) - n*x^(n+1)+n*x^(n-1) - 1;
 Poly= sym2poly(Poly_symb);
-PolyRoots=roots(Poly)
+PR=real(roots(Poly));
 Derivative=polyder(Poly);
-DerivativeRoots=roots(Derivative)
+DR=real(roots(Derivative));
+PR=sort(PR)
+DR=[DR;DR(1)]
+DR=sort(DR)
+DUB=();
+for i =1 :length(PR)
+    for k=1:length(DR)
+        if(PR(i)==DR(j)
+            DUB=PR(i);
+            DR(j)=NaN;
+            
+        
+    end
+    
+end
 
 
