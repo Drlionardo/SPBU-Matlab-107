@@ -1,10 +1,26 @@
-disp_taylor(exp(x), 'First', 0, 6);
-disp_taylor((sin(x)).^2, 'Second', 0, 11);
-
-
-function [] = disp_taylor(func, str_numb, start_p, count)
-    syms x
-    disp(str_numb);
-    disp(func);
-    disp(taylor(func, x, start_p, 'Order',  count));
-end
+%%
+syms x
+F=exp(x);
+%'First', 0, 6);
+T(x)=(taylor(F, x, 0, 'Order',  6));
+disp(T);
+x=linspace(-3,5);
+y=exp(x);
+plot(x,y,'r')
+hold on;
+y=T(x);
+plot(x,y,'b')
+%%
+syms x
+F=(sin(x)).^2;
+syms x
+F=exp(x);
+%'First', 0, 6);
+T(x)=(taylor(F, x, 0, 'Order',  6));
+disp(T);
+x=linspace(-2,2);
+y=(sin(x)).^2;
+plot(x,y,'r')
+hold on;
+y=T(x);
+plot(x,y,'b')

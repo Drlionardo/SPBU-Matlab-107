@@ -1,15 +1,8 @@
-syms x
-%% 
-disp('First');
-my_first = x.*exp(-x);
-disp(limit(my_first));
-
-%% 
-disp('Second');
-my_second = tan(x).^(tan(2.*x));
-disp(limit(my_second, pi/4));
-
-%% 
-disp('Third');
-my_third = atan(1./(1-x));
-disp(limit(my_third, 'x', 1, 'right'));
+%% 1
+disp(limit( x.*exp(-x)),inf);
+%% 2
+Exp = tan(x).^(tan(2.*x));
+disp(limit(Exp, pi/4));
+%% 3
+Exp3 = atan(1./(1-x));
+disp(limit(Exp3, 'x', 1, 'right')); %lim x->1+0
