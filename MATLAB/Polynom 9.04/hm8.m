@@ -1,4 +1,4 @@
-n=15;
+n=6;
 
 M=rand(n,n);
 P=poly(M);
